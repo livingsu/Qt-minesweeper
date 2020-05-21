@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/mine">
+        <file>pic/flag.jpg</file>
+        <file>pic/mine.jpg</file>
+        <file>pic/mine_step.jpg</file>
+        <file>pic/mine0.jpg</file>
+        <file>pic/mine1.jpg</file>
+        <file>pic/mine2.jpg</file>
+        <file>pic/mine3.jpg</file>
+        <file>pic/mine4.jpg</file>
+        <file>pic/mine5.jpg</file>
+        <file>pic/mine6.jpg</file>
+        <file>pic/mine7.jpg</file>
+        <file>pic/mine8.jpg</file>
+        <file>pic/notSweep.jpg</file>
+    </qresource>
+    <qresource prefix="/look">
+        <file>pic/happy.png</file>
+        <file>pic/unhappy.png</file>
+        <file>pic/victory.png</file>
+    </qresource>
+    <qresource prefix="/num">
+        <file>pic/num0.png</file>
+        <file>pic/num1.png</file>
+        <file>pic/num2.png</file>
+        <file>pic/num3.png</file>
+        <file>pic/num4.png</file>
+        <file>pic/num5.png</file>
+        <file>pic/num6.png</file>
+        <file>pic/num7.png</file>
+        <file>pic/num8.png</file>
+        <file>pic/num9.png</file>
+    </qresource>
+</RCC>
