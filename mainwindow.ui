@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Minesweeper</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGraphicsView" name="graphicsView">
@@ -66,7 +66,7 @@
    </property>
    <widget class="QMenu" name="menu">
     <property name="title">
-     <string>游戏</string>
+     <string>Play</string>
     </property>
     <addaction name="actionNew"/>
     <addaction name="separator"/>
@@ -79,7 +79,7 @@
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="title">
-     <string>帮助</string>
+     <string>Help</string>
     </property>
     <addaction name="actionAbout"/>
    </widget>
@@ -88,37 +88,37 @@
   </widget>
   <action name="actionPrimary">
    <property name="text">
-    <string>初级</string>
+    <string>Beginner</string>
    </property>
   </action>
   <action name="actionMid">
    <property name="text">
-    <string>中级</string>
+    <string>Intermediate</string>
    </property>
   </action>
   <action name="actionSenior">
    <property name="text">
-    <string>高级</string>
+    <string>Advanced</string>
    </property>
   </action>
   <action name="actionCustom">
    <property name="text">
-    <string>自定义</string>
+    <string>Customize</string>
    </property>
   </action>
   <action name="actionExit">
    <property name="text">
-    <string>退出</string>
+    <string>Quit</string>
    </property>
   </action>
   <action name="actionAbout">
    <property name="text">
-    <string>关于</string>
+    <string>About</string>
    </property>
   </action>
   <action name="actionNew">
    <property name="text">
-    <string>新游戏</string>
+    <string>New Game</string>
    </property>
   </action>
  </widget>

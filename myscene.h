@@ -5,7 +5,7 @@
 #include <QGraphicsScene>
 #include <QRandomGenerator>
 #include <QMessageBox>
-#include <myitem.h>
+#include "myitem.h"
 
 class myScene : public QGraphicsScene
 {

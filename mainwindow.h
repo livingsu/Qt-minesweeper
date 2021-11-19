@@ -5,7 +5,7 @@
 #include <QMessageBox>
 #include <QGraphicsItem>
 #include <QTimer>
-#include <myscene.h>
+#include "myscene.h"
 #include "settingwidget.h"
 #include "lookitem.h"
 #include "numscene.h"

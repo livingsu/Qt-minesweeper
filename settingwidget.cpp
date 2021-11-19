@@ -1,5 +1,6 @@
 #include "settingwidget.h"
 #include "ui_settingwidget.h"
+#include "languages.h"
 
 settingWidget::settingWidget(QWidget *parent) :
     QWidget(parent),
@@ -40,9 +41,10 @@ void settingWidget::on_spinBox_w_valueChanged(const QString &arg1)
 }
 
 void settingWidget::setMaxMineLabel(){
-    QString str="雷数(10~";
+    QString str=lang[EN][STRING_MINES];
+    str+=" (10~";
     str+=QString::number(ui->spinBox_w->value()*ui->spinBox_h->value()-1);
-    str+=")(M):";
+    str+="):";
     this->ui->label_m->setText(str);
     this->ui->spinBox_m->setMaximum(ui->spinBox_w->value()*ui->spinBox_h->value()-1);
 }

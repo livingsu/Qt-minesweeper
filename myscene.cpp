@@ -1,4 +1,5 @@
 ﻿#include "myscene.h"
+#include "languages.h"
 
 myScene::myScene(QObject *parent) : QGraphicsScene(parent)
 {
@@ -85,7 +86,8 @@ void myScene::gameOver(int row,int col){
 
     QMessageBox msg;
     msg.setIcon(QMessageBox::Critical);
-    msg.setText("游戏结束！");
+    msg.setText(lang[EN][STRING_GAMEOVER]);
+//    msg.setText("游戏结束！");
     msg.setStandardButtons(QMessageBox::Yes);
     msg.exec();
 
@@ -150,7 +152,8 @@ void myScene::checkGame(){
 
         QMessageBox msg;
         msg.setIcon(QMessageBox::Critical);
-        msg.setText("恭喜你成功了！");
+        msg.setText(lang[EN][STRING_CONGRATULATIONS]);
+//        msg.setText("恭喜你成功了！");
         msg.setStandardButtons(QMessageBox::Yes);
         msg.exec();
 

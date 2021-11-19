@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>自定义</string>
+   <string>Customize</string>
   </property>
   <widget class="QLabel" name="label_h">
    <property name="geometry">
@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>高度(9~24)(H):</string>
+    <string>Height (9~24):</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_w">
@@ -36,7 +36,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>宽度(9~30)(W):</string>
+    <string>Width (9~30):</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_yes">
@@ -49,7 +49,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>确定</string>
+    <string>Save</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_cancel">
@@ -62,7 +62,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>取消</string>
+    <string>Cancel</string>
    </property>
   </widget>
   <widget class="QSpinBox" name="spinBox_h">
@@ -129,7 +129,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>雷数(10~H*M-1)(M):</string>
+    <string>Mines (10~80):</string>
    </property>
   </widget>
  </widget>

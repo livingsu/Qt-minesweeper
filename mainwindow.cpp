@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "languages.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -100,7 +101,9 @@ void MainWindow::customSet(int w,int h,int m){
 void MainWindow::on_actionAbout_triggered()
 {
     QMessageBox msg;
-    msg.setText("模拟windows自带游戏的扫雷.\n开发者:livingsu.\nqq:1753843140");
+    msg.setWindowTitle(lang[EN][STRING_ABOUT]);
+    msg.setText(lang[EN][STRING_DESCRIPTION]);
+//    msg.setText("模拟windows自带游戏的扫雷.\n开发者:livingsu.\nqq:1753843140");
     msg.exec();
 }
 
@@ -110,7 +113,8 @@ void MainWindow::updateTimeScene(){
     if(restTime==0){
         QMessageBox msg;
         msg.setIcon(QMessageBox::Critical);
-        msg.setText("时间到!游戏结束！");
+        msg.setText(lang[EN][STRING_TIMEUP]);
+//        msg.setText("时间到!游戏结束！");
         msg.setStandardButtons(QMessageBox::Yes);
         msg.exec();
 
