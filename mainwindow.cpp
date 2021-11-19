@@ -87,8 +87,8 @@ void MainWindow::customSet(int w,int h,int m){
     //设置表情,剩余时间,剩余地雷
     updateMineScene();
 
-    this->ui->graphicsView_mines->setGeometry(0,0,60,30);
-    this->ui->graphicsView_time->setGeometry(20*w+5-60,0,60,30);
+    this->ui->graphicsView_mines->setGeometry(0,0,61,31);
+    this->ui->graphicsView_time->setGeometry(20*w+5-60,0,61,31);
     this->ui->graphicsView_look->setGeometry((20*w+5)/2-15,0,30,30);
     //设置地图
     this->scene->setMap(w,h,m);
