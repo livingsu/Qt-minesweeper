@@ -79,9 +79,9 @@ You can build QT-M as any other project with a CMake-based build system: run the
 
 ### Prerequisites
 
-* Qt5
-* CMake (>=3.21.4)
-* MSBuild (>=17)
+* Qt5 (5.15.2 recommended)
+* CMake (>=3.20.0)
+* MSBuild (16 recommended)
 
 
 
@@ -103,7 +103,7 @@ Currently there is only one CMake option `MINESWEEPER_LANG` which can switch the
 
 5) Configure
 
-6) Select Visual Studio 17 2022 as the generator
+6) Select Visual Studio 17 2019 as the generator
 
 7) Finish
 
