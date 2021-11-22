@@ -2,13 +2,13 @@
 <br />
 <p align="center">
   <a href="https://github.com/livingsu/Qt-minesweeper">
-    <img src="pic/mine_step.jpg" alt="Logo" width="23">
+    <img src="pic/mine_step.png" alt="Logo" width="23">
   </a>
 
   <h3 align="center">QT-M</h3>
 
   <p align="center">
-    Qt-minesweeper
+    Qt-Minesweeper
     <br />
     <a href="https://github.com/livingsu/Qt-minesweeper"><strong>Explore QT-M Repository »</strong></a>
   </p>

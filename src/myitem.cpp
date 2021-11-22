@@ -49,23 +49,23 @@ void myItem::mousePressEvent(QGraphicsSceneMouseEvent *event){
 }
 
 void myItem::updateItem(){
-    if(stepMine)this->setPixmap(QPixmap(":/mine/pic/mine_step.jpg"));
+    if(stepMine)this->setPixmap(QPixmap(":/mine/pic/mine_step.png"));
     else if(!sweeped){
-        if(!mark)this->setPixmap(QPixmap(":/mine/pic/notSweep.jpg"));
-        else this->setPixmap(QPixmap(":/mine/pic/flag.jpg"));
+        if(!mark)this->setPixmap(QPixmap(":/mine/pic/notSweep.png"));
+        else this->setPixmap(QPixmap(":/mine/pic/flag.png"));
     }
     else if(mine){
-        this->setPixmap(QPixmap(":/mine/pic/mine.jpg"));
+        this->setPixmap(QPixmap(":/mine/pic/mine.png"));
     }else{
-         if(numOfMines==0)this->setPixmap(QPixmap(":/mine/pic/mine0.jpg"));
-         else if(numOfMines==1)this->setPixmap(QPixmap(":/mine/pic/mine1.jpg"));
-         else if(numOfMines==2)this->setPixmap(QPixmap(":/mine/pic/mine2.jpg"));
-         else if(numOfMines==3)this->setPixmap(QPixmap(":/mine/pic/mine3.jpg"));
-         else if(numOfMines==4)this->setPixmap(QPixmap(":/mine/pic/mine4.jpg"));
-         else if(numOfMines==5)this->setPixmap(QPixmap(":/mine/pic/mine5.jpg"));
-         else if(numOfMines==6)this->setPixmap(QPixmap(":/mine/pic/mine6.jpg"));
-         else if(numOfMines==7)this->setPixmap(QPixmap(":/mine/pic/mine7.jpg"));
-         else if(numOfMines==8)this->setPixmap(QPixmap(":/mine/pic/mine8.jpg"));
+         if(numOfMines==0)this->setPixmap(QPixmap(":/mine/pic/mine0.png"));
+         else if(numOfMines==1)this->setPixmap(QPixmap(":/mine/pic/mine1.png"));
+         else if(numOfMines==2)this->setPixmap(QPixmap(":/mine/pic/mine2.png"));
+         else if(numOfMines==3)this->setPixmap(QPixmap(":/mine/pic/mine3.png"));
+         else if(numOfMines==4)this->setPixmap(QPixmap(":/mine/pic/mine4.png"));
+         else if(numOfMines==5)this->setPixmap(QPixmap(":/mine/pic/mine5.png"));
+         else if(numOfMines==6)this->setPixmap(QPixmap(":/mine/pic/mine6.png"));
+         else if(numOfMines==7)this->setPixmap(QPixmap(":/mine/pic/mine7.png"));
+         else if(numOfMines==8)this->setPixmap(QPixmap(":/mine/pic/mine8.png"));
     }
 }
 

@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     QTranslator t;
     if (strncmp(MINESWEEPER_LANG, "en", 2) != 0)
     {
-        bool loaded = t.load(QStringLiteral("lang_") + MINESWEEPER_LANG, MINESWEEPER_SRC);
+        bool loaded = t.load(QStringLiteral(":/lang/lang_") + MINESWEEPER_LANG, MINESWEEPER_SRC);
         qDebug() << MINESWEEPER_LANG << "loaded?" << loaded;
         a.installTranslator(&t);
     }

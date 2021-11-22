@@ -16,31 +16,31 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    lookitem.cpp \
-    main.cpp \
-    mainwindow.cpp \
-    myitem.cpp \
-    myscene.cpp \
-    numitem.cpp \
-    numscene.cpp \
-    settingwidget.cpp
+    src/main.cpp \
+    src/lookitem.cpp \
+    src/mainwindow.cpp \
+    src/myitem.cpp \
+    src/myscene.cpp \
+    src/numitem.cpp \
+    src/numscene.cpp \
+    src/settingwidget.cpp
 
 HEADERS += \
-    lookitem.h \
-    mainwindow.h \
-    myitem.h \
-    myscene.h \
-    numitem.h \
-    numscene.h \
-    settingwidget.h
+    src/lookitem.h \
+    src/mainwindow.h \
+    src/myitem.h \
+    src/myscene.h \
+    src/numitem.h \
+    src/numscene.h \
+    src/settingwidget.h
 
 FORMS += \
-    mainwindow.ui \
-    settingwidget.ui
+    src/mainwindow.ui \
+    src/settingwidget.ui
 
 TRANSLATIONS += \
-    lang_cn.ts \
-    lang_cz.ts
+    lang/lang_cn.ts \
+    lang/lang_cz.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

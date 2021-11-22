@@ -22,18 +22,18 @@ add_definitions(-DMINESWEEPER_LANG="${MINESWEEPER_LANG}")
 add_definitions(-DMINESWEEPER_SRC="${CMAKE_CURRENT_LIST_DIR}")
 
 set(MINESWEEPER_SRC
-    "lookitem.cpp"
-    "main.cpp"
-    "mainwindow.cpp"
-    "myitem.cpp"
-    "myscene.cpp"
-    "numitem.cpp"
-    "numscene.cpp"
-    "settingwidget.cpp"
+    "src/main.cpp"
+    "src/lookitem.cpp"
+    "src/mainwindow.cpp"
+    "src/myitem.cpp"
+    "src/myscene.cpp"
+    "src/numitem.cpp"
+    "src/numscene.cpp"
+    "src/settingwidget.cpp"
     "img.qrc"
     "lang.qrc"
 )
-add_executable(main ${MINESWEEPER_SRC})
+add_executable(qtm ${MINESWEEPER_SRC})
 
-target_link_libraries(main Qt5::Widgets
+target_link_libraries(qtm Qt5::Widgets
 )
