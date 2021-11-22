@@ -113,8 +113,9 @@ void MainWindow::updateTimeScene(){
     if(restTime==0){
         QMessageBox msg;
         msg.setIcon(QMessageBox::Critical);
+        msg.setWindowTitle(":(");
         msg.setText(QObject::tr("Time is up! The game is over!"));
-        msg.setStandardButtons(QMessageBox::Yes);
+        msg.setStandardButtons(QMessageBox::Ok);
         msg.exec();
 
         this->scene->initialize();

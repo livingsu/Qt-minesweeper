@@ -71,7 +71,7 @@ This project simulates the minesweeper game that comes with the Windows.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-As a general user You can directly use NSIS installers inside the `\releases` folder.
+As a general user You can directly use platform specific installers inside the `\releases` folder.
 
 For development You can build QT-M as any other project with a CMake-based build system: run the installed CMake on the sources of this repository with your preferred options and generators.
 
@@ -79,13 +79,14 @@ For development You can build QT-M as any other project with a CMake-based build
 ### Supported Platforms
 
 * Windows
+* Linux
 
 
 ### Prerequisites
 
 * Qt5 (5.15.2 recommended)
 * CMake (>=3.20.0)
-* MSBuild (16 recommended)
+* MSBuild (16 recommended) / gcc (11 recommended)
 
 
 
@@ -107,7 +108,7 @@ Currently there is only one CMake option `MINESWEEPER_LANG` which can switch the
 
 5) Configure
 
-6) Select Visual Studio 17 2019 as the generator
+6) Select Visual Studio 17 2019 / Unix Makefiles as the generator
 
 7) Finish
 
@@ -119,11 +120,11 @@ Currently there is only one CMake option `MINESWEEPER_LANG` which can switch the
 
 10) Generate
 
-11) Open Developer Tools and navigate to the build folder
+11) Open Developer Tools / Terminal and navigate to the binary folder
 
-12) `msbuild Minesweeper.sln`
+12) `msbuild Minesweeper.sln` / `make`
 
-13) Go to Debug folder and run main.exe
+13) Go to `\Debug` subfolder and run `"main.exe"` / run `./main`
 
 
 

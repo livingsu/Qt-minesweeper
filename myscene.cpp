@@ -85,8 +85,9 @@ void myScene::gameOver(int row,int col){
 
     QMessageBox msg;
     msg.setIcon(QMessageBox::Critical);
+    msg.setWindowTitle(":(");
     msg.setText(QObject::tr("Game over!"));
-    msg.setStandardButtons(QMessageBox::Yes);
+    msg.setStandardButtons(QMessageBox::Ok);
     msg.exec();
 
     qDebug()<<"重新初始化";
@@ -149,9 +150,10 @@ void myScene::checkGame(){
         emit victorySignal(2);
 
         QMessageBox msg;
-        msg.setIcon(QMessageBox::Critical);
+        msg.setIcon(QMessageBox::Information);
+        msg.setWindowTitle(":)");
         msg.setText(QObject::tr("Congratulations on your success!"));
-        msg.setStandardButtons(QMessageBox::Yes);
+        msg.setStandardButtons(QMessageBox::Ok);
         msg.exec();
 
        // for(int i=0;i<MAX_WIDTH;++i)
