@@ -63,15 +63,29 @@
     </message>
     <message>
         <location filename="mainwindow.cpp" line="106"/>
-        <source>Simulate the minesweeper game that comes with the Windows.
-Developer: livingsu.
-qq:1753843140</source>
-        <translation>Simulujte hru hledání min, která je součástí systému Windows.\nDeveloper: livingsu.\nqq:1753843140</translation>
+        <source>Simulate the Minesweeper game that comes with the Windows.&lt;br /&gt;Developer: livingsu&lt;br /&gt;qq:1753843140</source>
+        <oldsource>Simulate the minesweeper game that comes with the Windows.&lt;br /&gt;Developer: livingsu&lt;br /&gt;qq:1753843140</oldsource>
+        <translation>Simulujte hru Hledání min, která je součástí systému Windows.&lt;br /&gt;Developer: livingsu&lt;br /&gt;qq:1753843140</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="116"/>
         <source>Time is up! The game is over!</source>
         <translation>Čas vypršel! Hra skončila!</translation>
+    </message>
+    <message>
+        <location filename="myscene.cpp" line="88"/>
+        <source>Game over!</source>
+        <translation>Hra skončila!</translation>
+    </message>
+    <message>
+        <location filename="myscene.cpp" line="153"/>
+        <source>Congratulations on your success!</source>
+        <translation>Gratulace k úspěchu!</translation>
+    </message>
+    <message>
+        <location filename="settingwidget.cpp" line="44"/>
+        <source>Mines</source>
+        <translation>Miny</translation>
     </message>
 </context>
 <context>

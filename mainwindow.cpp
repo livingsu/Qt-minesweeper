@@ -103,7 +103,7 @@ void MainWindow::on_actionAbout_triggered()
 {
     QMessageBox msg;
     msg.setWindowTitle(QObject::tr("About"));
-    msg.setText(QObject::tr("Simulate the minesweeper game that comes with the Windows.\nDeveloper: livingsu.\nqq:1753843140"));
+    msg.setText(QObject::tr("Simulate the Minesweeper game that comes with the Windows.<br />Developer: livingsu<br />qq:1753843140"));
     msg.exec();
 }
 

@@ -8,8 +8,12 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     QTranslator t;
-    t.load(":/lang_cn.qm", ":/lang_cz.qm");
-    a.installTranslator(&t);
+    if (strncmp(MINESWEEPER_LANG, "en", 2) != 0)
+    {
+        bool loaded = t.load(QStringLiteral("lang_") + MINESWEEPER_LANG, MINESWEEPER_SRC);
+        qDebug() << MINESWEEPER_LANG << "loaded?" << loaded;
+        a.installTranslator(&t);
+    }
 
     MainWindow w;
     w.show();

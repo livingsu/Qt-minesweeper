@@ -11,12 +11,15 @@ set(CMAKE_AUTOUIC ON)
  
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
-set(MINESWEEPER_LANG "EN" CACHE STRING "Language of the application.")
+set(MINESWEEPER_LANG "en" CACHE STRING "Language of the application.")
 set(MINESWEEPER_LANG_OPTIONS
-    "EN"
-    "CN"
+    "en"
+    "cn"
+    "cz"
 )
 set_property(CACHE MINESWEEPER_LANG PROPERTY STRINGS ${MINESWEEPER_LANG_OPTIONS})
+add_definitions(-DMINESWEEPER_LANG="${MINESWEEPER_LANG}")
+add_definitions(-DMINESWEEPER_SRC="${CMAKE_CURRENT_LIST_DIR}")
 
 set(MINESWEEPER_SRC
     "lookitem.cpp"
@@ -27,8 +30,8 @@ set(MINESWEEPER_SRC
     "numitem.cpp"
     "numscene.cpp"
     "settingwidget.cpp"
-    "languages.cpp"
     "img.qrc"
+    "lang.qrc"
 )
 add_executable(main ${MINESWEEPER_SRC})
 

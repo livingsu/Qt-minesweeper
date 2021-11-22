@@ -63,10 +63,9 @@
     </message>
     <message>
         <location filename="mainwindow.cpp" line="106"/>
-        <source>Simulate the minesweeper game that comes with the Windows.
-Developer: livingsu.
-qq:1753843140</source>
-        <translation>模拟windows自带游戏的扫雷.\n开发者:livingsu.\nqq:1753843140</translation>
+        <source>Simulate the Minesweeper game that comes with the Windows.&lt;br /&gt;Developer: livingsu&lt;br /&gt;qq:1753843140</source>
+        <oldsource>Simulate the minesweeper game that comes with the Windows.&lt;br /&gt;Developer: livingsu&lt;br /&gt;qq:1753843140</oldsource>
+        <translation>模拟Windows自带游戏的扫雷.&lt;br /&gt;开发者:livingsu&lt;br /&gt;qq:1753843140</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="116"/>
@@ -76,6 +75,21 @@ qq:1753843140</source>
     <message>
         <source>Description</source>
         <translation type="vanished">模拟windows自带游戏的扫雷.\n开发者:livingsu.\nqq:1753843140</translation>
+    </message>
+    <message>
+        <location filename="myscene.cpp" line="88"/>
+        <source>Game over!</source>
+        <translation>游戏结束！</translation>
+    </message>
+    <message>
+        <location filename="myscene.cpp" line="153"/>
+        <source>Congratulations on your success!</source>
+        <translation>恭喜你成功了！</translation>
+    </message>
+    <message>
+        <location filename="settingwidget.cpp" line="44"/>
+        <source>Mines</source>
+        <translation>雷数</translation>
     </message>
 </context>
 <context>
