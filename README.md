@@ -127,7 +127,7 @@ Currently there is only one CMake option `MINESWEEPER_LANG` which can switch the
 ## Release History
 
 * 1.0
-	* ADDITIONS: CMake and English language support.
+	* ADDITIONS: CMake and multilingual support.
 	* CHANGES: Fixed Qt bugs.
 
 

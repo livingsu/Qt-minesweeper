@@ -38,10 +38,15 @@ FORMS += \
     mainwindow.ui \
     settingwidget.ui
 
+TRANSLATIONS += \
+    lang_cn.ts \
+    lang_cz.ts
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    img.qrc
+    img.qrc \
+    lang.qrc

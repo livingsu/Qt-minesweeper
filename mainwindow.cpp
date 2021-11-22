@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "languages.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -41,6 +40,8 @@ MainWindow::MainWindow(QWidget *parent)
     this->ui->graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     this->ui->graphicsView_time->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     this->ui->graphicsView_time->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    this->ui->graphicsView_mines->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    this->ui->graphicsView_mines->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     //初始大小为9*9,10
     on_actionPrimary_triggered();
@@ -87,8 +88,8 @@ void MainWindow::customSet(int w,int h,int m){
     //设置表情,剩余时间,剩余地雷
     updateMineScene();
 
-    this->ui->graphicsView_mines->setGeometry(0,0,61,31);
-    this->ui->graphicsView_time->setGeometry(20*w+5-60,0,61,31);
+    this->ui->graphicsView_mines->setGeometry(0,0,60,30);
+    this->ui->graphicsView_time->setGeometry(20*w+5-60,0,60,30);
     this->ui->graphicsView_look->setGeometry((20*w+5)/2-15,0,30,30);
     //设置地图
     this->scene->setMap(w,h,m);
@@ -101,9 +102,8 @@ void MainWindow::customSet(int w,int h,int m){
 void MainWindow::on_actionAbout_triggered()
 {
     QMessageBox msg;
-    msg.setWindowTitle(lang[EN][STRING_ABOUT]);
-    msg.setText(lang[EN][STRING_DESCRIPTION]);
-//    msg.setText("模拟windows自带游戏的扫雷.\n开发者:livingsu.\nqq:1753843140");
+    msg.setWindowTitle(QObject::tr("About"));
+    msg.setText(QObject::tr("Simulate the minesweeper game that comes with the Windows.\nDeveloper: livingsu.\nqq:1753843140"));
     msg.exec();
 }
 
@@ -113,8 +113,7 @@ void MainWindow::updateTimeScene(){
     if(restTime==0){
         QMessageBox msg;
         msg.setIcon(QMessageBox::Critical);
-        msg.setText(lang[EN][STRING_TIMEUP]);
-//        msg.setText("时间到!游戏结束！");
+        msg.setText(QObject::tr("Time is up! The game is over!"));
         msg.setStandardButtons(QMessageBox::Yes);
         msg.exec();
 
