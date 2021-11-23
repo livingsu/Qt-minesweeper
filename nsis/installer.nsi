@@ -2,39 +2,113 @@
 
 ;--------------------------------
 
-; The name of the installer
-Name "Qt-Minesweeper"
-
-; The file to write
-OutFile "qtm.exe"
-
-; The default installation directory
-InstallDir $PROGRAMFILES\QtM
-
-; The text to prompt the user to enter a directory
-DirText "This will install Qt-Minesweeper on your computer. Choose a directory"
+!pragma warning error all
 
 ;--------------------------------
+;Include Modern UI
 
-; The stuff to install
-Section "" ;No components page, name is not important
+  !include "MUI2.nsh"
 
-; Set output path to the installation directory.
-SetOutPath $INSTDIR
+;--------------------------------
+;General
 
-; Put file there
-File qtm.exe
+  ;Properly display all languages (Installer will not work on Windows 95, 98 or ME!)
+  Unicode true
 
-; Tell the compiler to write an uninstaller and to look for a "Uninstall" section
-WriteUninstaller $INSTDIR\uninstall.exe
+  ;Name and file
+  Name "Qt-Minesweeper"
+  OutFile "QtM-1.0-win64-x64.exe"
 
-SectionEnd ; end the section
+  ;Default installation folder
+  InstallDir "C:\QtM"
 
-; The uninstall section
-Section "Uninstall"
+  ;Request application privileges for Windows Vista
+  RequestExecutionLevel user
 
-Delete $INSTDIR\uninstall.exe
-Delete $INSTDIR\qtm.exe
-RMDir $INSTDIR
+;--------------------------------
+;Interface Settings
 
-SectionEnd 
+  !define MUI_ABORTWARNING
+
+  ;Show all languages, despite user's codepage
+  !define MUI_LANGDLL_ALLLANGUAGES
+
+;--------------------------------
+;Pages
+
+  !insertmacro MUI_PAGE_WELCOME
+  !insertmacro MUI_PAGE_LICENSE "files\license.txt"
+  !insertmacro MUI_PAGE_DIRECTORY
+  !insertmacro MUI_PAGE_INSTFILES
+  !insertmacro MUI_PAGE_FINISH
+  
+  !insertmacro MUI_UNPAGE_WELCOME
+  !insertmacro MUI_UNPAGE_CONFIRM
+  !insertmacro MUI_UNPAGE_LICENSE "files\license.txt"
+  !insertmacro MUI_UNPAGE_DIRECTORY
+  !insertmacro MUI_UNPAGE_INSTFILES
+  !insertmacro MUI_UNPAGE_FINISH
+
+;--------------------------------
+;Language Selection Dialog Settings
+
+;--------------------------------
+;Languages
+
+  !insertmacro MUI_LANGUAGE "English" ; The first language is the default language
+  !insertmacro MUI_LANGUAGE "SimpChinese"
+  !insertmacro MUI_LANGUAGE "Czech"
+
+;--------------------------------
+;Reserve Files
+  
+  ;If you are using solid compression, files that are required before
+  ;the actual installation should be stored first in the data block,
+  ;because this will make your installer start faster.
+  
+  !insertmacro MUI_RESERVEFILE_LANGDLL
+
+;--------------------------------
+;Installer Sections
+
+Section "Main Section" SecMain
+
+  ; Set output path to the installation directory.
+  SetOutPath $INSTDIR
+
+  ; Put file there
+  File qtm.exe
+  
+  ;Create uninstaller
+  WriteUninstaller "$INSTDIR\uninstall.exe"
+
+SectionEnd
+
+;--------------------------------
+;Installer Functions
+
+Function .onInit
+
+  !insertmacro MUI_LANGDLL_DISPLAY
+
+FunctionEnd
+ 
+;--------------------------------
+;Uninstaller Section
+
+Section "uninstall"
+
+  Delete $INSTDIR\uninstall.exe
+  Delete $INSTDIR\qtm.exe
+  RMDir $INSTDIR
+
+SectionEnd
+
+;--------------------------------
+;Uninstaller Functions
+
+Function un.onInit
+
+  !insertmacro MUI_UNGETLANGUAGE
+  
+FunctionEnd

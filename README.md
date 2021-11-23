@@ -124,7 +124,7 @@ Currently there is only one CMake option `MINESWEEPER_LANG` which can switch the
 
 12) `msbuild Minesweeper.sln` / `make`
 
-13) Go to `\Debug` subfolder and run `"main.exe"` / run `./main`
+13) Go to `\Debug` subfolder and run `"qtm.exe"` / run `./qtm`
 
 
 
