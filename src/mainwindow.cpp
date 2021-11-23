@@ -123,7 +123,7 @@ void MainWindow::updateTimeScene(){
 }
 
 void MainWindow::updateMineScene(){
-    qDebug()<<"update mine!"<<this->scene->getRestMines();
+    qDebug()<<"Mines left:"<<this->scene->getRestMines();
 
     this->mineScene->setNumer(this->scene->getRestMines());
 }

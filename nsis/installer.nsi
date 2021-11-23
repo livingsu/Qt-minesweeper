@@ -77,7 +77,15 @@ Section "Main Section" SecMain
   SetOutPath $INSTDIR
 
   ; Put file there
-  File qtm.exe
+  File files\qtm.exe
+  File files\license.txt
+  File files\Qt5Core.dll
+  File files\Qt5Gui.dll
+  File files\Qt5Widgets.dll
+  
+  ; Copy plugin
+  SetOutPath "$INSTDIR\plugins\platforms"
+  File /nonfatal /a /r "files\plugins\platforms\"
   
   ;Create uninstaller
   WriteUninstaller "$INSTDIR\uninstall.exe"
@@ -98,9 +106,7 @@ FunctionEnd
 
 Section "uninstall"
 
-  Delete $INSTDIR\uninstall.exe
-  Delete $INSTDIR\qtm.exe
-  RMDir $INSTDIR
+  RMDir /r $INSTDIR
 
 SectionEnd
 

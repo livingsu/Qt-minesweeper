@@ -71,7 +71,7 @@ void myScene::initialize(){
 }
 
 void myScene::gameOver(int row,int col){
-    qDebug()<<"游戏结束！";
+    qDebug()<<"Game over!";
     emit gameOverSignal(1);
 
     for(int i=0;i<width;++i){//显示其余的地雷
@@ -90,7 +90,7 @@ void myScene::gameOver(int row,int col){
     msg.setStandardButtons(QMessageBox::Ok);
     msg.exec();
 
-    qDebug()<<"重新初始化";
+    qDebug()<<"Reinitialize";
 
     initialize();
 }

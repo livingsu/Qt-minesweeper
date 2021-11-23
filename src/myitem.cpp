@@ -22,25 +22,25 @@ void myItem::simulateLeftClick(){
 }
 
 void myItem::mousePressEvent(QGraphicsSceneMouseEvent *event){
-    qDebug()<<"检测到按下！"<<row<<","<<col;
-    qDebug()<<event->button();
-    qDebug()<<event->buttons();
+    qDebug()<<"Click detected at:"<<row<<","<<col;
+//    qDebug()<<event->button();
+//    qDebug()<<event->buttons();
 
     if(event->buttons()==(Qt::LeftButton|Qt::RightButton)){
-        qDebug()<<"左右键同时按下";
+        qDebug()<<"|-> Left and right click";
         if((sweeped&&numOfMines!=0)||(!sweeped&&mark)){//已被挖掘且有数字/未挖掘被标记
             emit doubleClickSignal(row,col);
         }
 
     }else if(event->button()==Qt::LeftButton){//左键点击
-        qDebug()<<"左键按下";
+        qDebug()<<"|-> Left click";
         simulateLeftClick();
     }else if(event->button()==Qt::RightButton){
-        qDebug()<<"右键按下";
+        qDebug()<<"|-> Right click";
         if(!sweeped){
             setMark(!mark);
 
-            qDebug()<<"标记改变！";
+            qDebug()<<"Mark changed!";
             emit markChangedSignal();
 
         }

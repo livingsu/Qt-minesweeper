@@ -27,7 +27,7 @@ public slots:
     void findBlocks(int row,int col);//递归寻找无雷区
     void doubleClick(int row,int col);//某处双击
     void checkGame();//检查游戏是否结束
-    void markChange(){qDebug()<<"scene 标记信号！";emit markChangedSignal();}//标记改变,改变剩余地雷数
+    void markChange(){qDebug()<<"Scene Mark changed!";emit markChangedSignal();}//标记改变,改变剩余地雷数
 
 private:
     static const int MAX_HEIGHT=24;
